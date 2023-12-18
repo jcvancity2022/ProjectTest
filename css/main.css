@@ -1,0 +1,277 @@
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+
+/*spacer*/
+section {
+  margin-bottom: 2rem;
+}
+
+/* Spacing for top-level sections */
+body > section {
+  margin-bottom: 4rem;
+}
+
+/* Spacing for nested sections */
+section > section {
+  margin-bottom: 2rem;
+}
+
+/* https://web.dev/learn/forms/styling/ */
+.form-element {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.element {
+  padding-bottom: 2rem;
+  border-top-width: 0.15rem;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+/* Specific style for in-text link */
+section[id="interactive_elements"] .element a:hover,
+section[id="interactive_elements"] .element a:focus {
+    color: #ff4500 !important;        /* Change the text colour to orange-red */
+    text-decoration: underline !important;  /* Underline the text */
+    outline: none !important;         /* Remove the browser default outline */
+    background-color: #f5f5f5 !important;  /* A light gray background for added emphasis */
+}
+
+.intext-link:hover,
+.intext-link:focus {
+    color: #0047ab !important;
+    text-decoration: none !important;
+    outline: none !important;
+    background-color: #ffebcd !important;
+    padding: 2px 6px !important;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2) !important;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+h2 {
+  margin-top: 6rem;
+}
+
+h3 {
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+h4 {
+  margin-bottom: 0.25rem;
+}
+@media (max-width: 480px) {
+  p {
+    max-width: 80%;
+    margin-top: 0;
+  }
+}
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+
+code {
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+}
+
+/* Input and Label Group */
+.input-group {
+    margin-bottom: 1rem; /* space out groups */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space between label and input */
+}
+
+/* Label Styling */
+.input-group label {
+    font-weight: 600; /* make the label slightly bolder */
+}
+
+/* Input Field Styling */
+.input-group input[type="text"] {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 2px solid #ccc; /* default border color */
+    border-radius: 4px; /* rounded edges */
+    transition: border-color 0.3s ease; /* smooth transition for border changes */
+}
+
+/* Input Field Hover State */
+.input-group input[type="text"]:hover {
+    border-color: #666; /* change border color on hover */
+}
+
+/* Input Field Focus State */
+.input-group input[type="text"]:focus {
+    border-color: #007BFF; /* change border color on focus to a noticeable color, for instance, blue */
+    outline: none; /* remove default browser outline */
+}
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* Styling for the navigation button */
+.button-nav {
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(50,50,50);
+  text-decoration: none;
+  transition-property: background-color; 
+  transition-duration: 0.5s;
+}
+
+.button-nav:hover, .button-nav:focus {
+  background-color: rgb(200,200,200);
+}
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+}
+
+/*spacer*/
+section {
+  margin-bottom: 2rem;
+}
+
+
+
+/* https://web.dev/learn/forms/styling/ */
+.form-element {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.element {
+  padding-bottom: 2rem;
+  border-top-width: 0.15rem;
+  border-top-style: solid;
+  border-top-color: black;
+}
+
+/* Specific style for in-text link */
+section[id="interactive_elements"] .element a:hover,
+section[id="interactive_elements"] .element a:focus {
+    color: #ff4500 !important;        /* Change the text color to orange-red */
+    text-decoration: underline !important;  /* Underline the text */
+    outline: none !important;         /* Remove the browser default outline */
+    background-color: #f5f5f5 !important;  /* A light gray background for added emphasis */
+}
+
+h2 {
+  margin-top: 6rem;
+}
+
+h3 {
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+h4 {
+  margin-bottom: 0.25rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+nav a:hover, nav a:focus {
+  text-decoration: none;
+}
+
+code {
+  background-color: #EEE;
+  padding: 0.5rem;
+  display: block;
+}
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #FFF;
+    padding: 10px;
+    z-index: 100;
+    transition: top 0.2s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* 
+  INTERACTIVE ELEMENTS -------------------
+*/
+
+/* Styling for the navigation button */
+.button-nav {
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgb(50,50,50);
+  text-decoration: none;
+  transition-property: background-color; 
+  transition-duration: 0.5s;
+}
+
+.button-nav:hover, .button-nav:focus {
+  background-color: rgb(200,200,200);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+/*
+At the smallest display width — around 320 pixels — make sure your navigation stacks in one column.
+*/
+nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px
+}
+@media (min-width: 321px) {
+  nav {
+    grid-template-columns: 1fr 1fr 1fr 1fr;  /* Creates 4 columns each taking an equal fraction of the available space */
+  }
+}
+/*
+Using an @media query, change the grid structure so the navigation items are next to one another.
+*/
+@media (min-width: 640px) {
+  nav {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+
+
+
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
+
+
+/* 
+  TEXT ELEMENTS -------------------
+*/
+
+
+
+
+/* 
+  COMBINED ELEMENTS -------------------
+*/
